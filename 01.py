@@ -28,7 +28,7 @@ try:
         token = os.getenv('TOKEN_01')
         chat_id = os.getenv('TOKEN_02')
         msg = (f'{nome}\n{valor_cota}\n{liq}\n{div}\n{yd}\n{patr_liq}\n{vlr_pat}\n{rent_mes}\n{pvp}')
-        url_tel = ("https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+msg)
+        url_tel = (f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={msg}")
         respost = requests.get(url_tel)
         ###############
         
@@ -37,14 +37,6 @@ except:
     token = os.getenv('TOKEN_01')
     chat_id = os.getenv('TOKEN_02')
     msg = ('Código com problemas !')
-    url_tel = ("https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+msg)
-    respost = requests.get(url_tel)
-    ###############
-    
-    ###############
-    token = '6128272966:AAG_ifgQKabRLjqafqkJV0xWHMx7qaD2Qs4' #os.getenv('TOKEN_01')
-    chat_id = '-634202755' #os.getenv('TOKEN_02')
-    msg = (f'{nome}\n{valor_cota}\n{liq}\n{div}\n{yd}\n{patr_liq}\n{vlr_pat}\n{rent_mes}\n{pvp}')
-    url_tel = (f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={msg})
+    url_tel = (f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={msg}")
     respost = requests.get(url_tel)
     ###############
