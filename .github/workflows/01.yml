@@ -20,4 +20,4 @@ jobs:
         env:
           TOKEN_01: ${{ secrets.TOKEN_01 }}
           TOKEN_02: ${{ secrets.TOKEN_02 }}
-        run: python3 01.py
+        run: python 01.py
