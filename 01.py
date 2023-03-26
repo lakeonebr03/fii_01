@@ -21,8 +21,8 @@ try:
         pvp = f'{titulo[6].text.strip()} {valor[6].text.strip()}'
 
         ###############
-        token = os.getenv('TOKEN_01')
-        chat_id = os.getenv('TOKEN_02')
+        token = os.environ.get('TOKEN_01')
+        chat_id = os.environ.get('TOKEN_02')
         msg = (f'{nome}\n{valor_cota}\n{div}\n{yd}\n{pvp}')
         url_tel = (f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={msg}")
         respost = requests.get(url_tel)
@@ -30,8 +30,8 @@ try:
         
 except:
     ###############
-    token = os.getenv('TOKEN_01')
-    chat_id = os.getenv('TOKEN_02')
+    token = os.environ.get('TOKEN_01')
+    chat_id = os.environ.get('TOKEN_02')
     msg = ('Código com problemas !')
     url_tel = (f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={msg}")
     respost = requests.get(url_tel)
